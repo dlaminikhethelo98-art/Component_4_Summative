@@ -10,10 +10,10 @@ export let customers = [];
 // =======================================
 
 //Fetch The DOM Elements
-export const customerInput = "";
-export const addBtn = "";
-export const customerList = "";
-export const counter = "";
+export const customerInput = getElementbyId ("customerInput");
+export const addBtn = getElementbyId ("addButton");
+export const customerList = etElementbyId("customerList");
+export const counter = getElementbyId("counter");
 
 // Complete this function
 
@@ -22,18 +22,26 @@ export function addCustomer()
 
     // Retrieve the customer's name
 
-
+let customersName = customerInput.value;
 
     // Add customer to array
 
-
+ customer.push(CustomerName)
 
     // Clear the textbox
 
+    customerInput.value="";
 
 
     // Call displayCustomers()
+ displayCustomers();
+     function displayCustomers() {
+customerList.innerHTML = "";
 
+for (let customer of customers) {
+customerList.innerHTML += `<li>${customer}</li>`;
+}
+}
 
 
 }
@@ -48,21 +56,25 @@ export function displayCustomers()
 
     // Clear the list
 
-
+function displayCustomers(){
+customerList.innerHTML="";
 
     // Loop through the array
 
+for (let customers of customer){
 
+    }
 
         // Create a list item
-
+customerList.innerHTML+='<li>${customer}</li>';
 
 
         // Display customer
-
+counter.textContent=customer.length;
 
 
         // Add list item to UL
+customerList.addCustomer
 
 
 
